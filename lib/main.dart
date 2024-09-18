@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mastering_routes_and_navigation/screens/screen.dart';
+import 'package:mastering_routes_and_navigation/screens/screen2.dart';
 
 void main() {
   runApp(const Routes());
@@ -11,8 +12,12 @@ class Routes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Routes Methods',
-        theme: ThemeData(useMaterial3: false, primaryColor: Colors.red),
-        home: FirstScreen());
+      title: 'Routes Methods',
+      theme: ThemeData(useMaterial3: false, primaryColor: Colors.red),
+      routes: {
+        FirstScreen.id: (context) => const FirstScreen(),
+        SecondScreen.id:(context) =>const SecondScreen(),
+      },
+    );
   }
 }

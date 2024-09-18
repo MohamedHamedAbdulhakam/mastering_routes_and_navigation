@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mastering_routes_and_navigation/screens/screen2.dart';
 
 class FirstScreen extends StatelessWidget {
-   FirstScreen({super.key});
-  String data = 'You are in the second screen';
+const   FirstScreen({super.key});
+  static const  String id = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,15 +14,20 @@ class FirstScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('You are in the first screen'),
+           const  Text('You are in the first screen'),
             IconButton(
               onPressed: () {
-                Navigator.of(context)//first method unnamed routing
-                    .push(MaterialPageRoute(builder: (_) => SecondScreen(date: data,)));
+                // Navigator.of(context) //first method unnamed routing
+                //     .push(MaterialPageRoute(
+                //         builder: (_) => SecondScreen(
+                //               date: data,
+                //             )));
+                // Navigator.of(context).pushNamed(SecondScreen.id);
+                Navigator.pushNamed(context, SecondScreen.id );
               },
               icon: const Icon(Icons.arrow_forward_ios),
             ),
-            Text('Go to the second screen')
+            const Text('Go to the second screen')
           ],
         ),
       ),
