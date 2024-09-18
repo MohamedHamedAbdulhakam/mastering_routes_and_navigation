@@ -22,8 +22,8 @@ const   FirstScreen({super.key});
                 //         builder: (_) => SecondScreen(
                 //               date: data,
                 //             )));
-                // Navigator.of(context).pushNamed(SecondScreen.id);
-                Navigator.pushNamed(context, SecondScreen.id );
+                Navigator.of(context).pushNamed(SecondScreen.id,arguments: 'this text from first screen how are you');
+                // Navigator.pushNamed(context, SecondScreen.id );
               },
               icon: const Icon(Icons.arrow_forward_ios),
             ),
