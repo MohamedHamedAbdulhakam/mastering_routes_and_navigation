@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mastering_routes_and_navigation/main.dart';
+import 'package:mastering_routes_and_navigation/routes/routes.dart';
 import 'package:mastering_routes_and_navigation/screens/screen2.dart';
 
 class FirstScreen extends StatelessWidget {
 const   FirstScreen({super.key});
-  static const  String id = '/';
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ const   FirstScreen({super.key});
                 //         builder: (_) => SecondScreen(
                 //               date: data,
                 //             )));
-                Navigator.of(context).pushNamed(SecondScreen.id,arguments: 'this text from first screen how are you');
+                Navigator.of(context).pushNamed(Routes.secondScreen,arguments: 'this text from first screen how are you');
                 // Navigator.pushNamed(context, SecondScreen.id );
               },
               icon: const Icon(Icons.arrow_forward_ios),

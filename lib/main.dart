@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mastering_routes_and_navigation/routes/routes.dart';
 import 'package:mastering_routes_and_navigation/screens/screen.dart';
 import 'package:mastering_routes_and_navigation/screens/screen2.dart';
 
 void main() {
-  runApp(const Routes());
+  runApp(const MasterRoutes());
 }
 
-class Routes extends StatelessWidget {
-  const Routes({super.key});
+class MasterRoutes extends StatelessWidget {
+  const MasterRoutes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +16,8 @@ class Routes extends StatelessWidget {
       title: 'Routes Methods',
       theme: ThemeData(useMaterial3: false, primaryColor: Colors.red),
       routes: {
-        FirstScreen.id: (context) => const FirstScreen(),
-        SecondScreen.id:(context) =>const SecondScreen(),
+        Routes.firstScreen: (context) => const FirstScreen(),
+        Routes.secondScreen:(context) =>const SecondScreen(),
       },
     );
   }

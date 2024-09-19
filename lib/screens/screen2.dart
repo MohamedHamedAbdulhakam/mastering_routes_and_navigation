@@ -4,18 +4,18 @@ class SecondScreen extends StatefulWidget {
   const SecondScreen({
     super.key,
   });
-  static const String id = '/second screen';
+  
 
   @override
   State<SecondScreen> createState() => _SecondScreenState();
 }
 
 class _SecondScreenState extends State<SecondScreen> {
-  String args;
+ dynamic args;
   @override
-  void didChangeDependencies() {
-    args = ModalRoute.of(context).settings.arguments!;
-    // TODO: implement didChangeDependencies
+  void didChangeDependencies() {//the second method
+    args = ModalRoute.of(context)?.settings.arguments;
+  
     super.didChangeDependencies();
   }
 
