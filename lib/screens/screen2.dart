@@ -11,13 +11,13 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
- dynamic args;
-  @override
-  void didChangeDependencies() {//the second method
-    args = ModalRoute.of(context)?.settings.arguments;
+//  dynamic args;
+//   // @override
+  // void didChangeDependencies() {//the second method
+  //   args = ModalRoute.of(context)?.settings.arguments;
   
-    super.didChangeDependencies();
-  }
+  //   super.didChangeDependencies();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +25,11 @@ class _SecondScreenState extends State<SecondScreen> {
       appBar: AppBar(
         title: const Text(' Second screen '),
       ),
-      body:  Center(
+      body:  const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(args),
+             Text('welcome to second screen'),
           ],
         ),
       ),

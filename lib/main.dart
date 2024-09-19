@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mastering_routes_and_navigation/routes/router.dart';
 import 'package:mastering_routes_and_navigation/routes/routes.dart';
 import 'package:mastering_routes_and_navigation/screens/screen.dart';
 import 'package:mastering_routes_and_navigation/screens/screen2.dart';
+
 
 void main() {
   runApp(const MasterRoutes());
@@ -15,10 +17,8 @@ class MasterRoutes extends StatelessWidget {
     return MaterialApp(
       title: 'Routes Methods',
       theme: ThemeData(useMaterial3: false, primaryColor: Colors.red),
-      routes: {
-        Routes.firstScreen: (context) => const FirstScreen(),
-        Routes.secondScreen:(context) =>const SecondScreen(),
-      },
+      initialRoute: Routes.firstScreen,
+      onGenerateRoute: SpecialRouter.GeneratedRoute,
     );
   }
 }
